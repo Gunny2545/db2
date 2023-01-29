@@ -28,6 +28,12 @@ app.get("/memory/:memory", controller.getProductsByName);
 
 app.get("/storage/:storage", controller.getProductsByName);
 
+app.get("/sensor/:sensor", controller.getProductsByName);
+
+app.get("/resolution/:resolution", controller.getProductsByName);
+
+app.get("/batterylife/:batterylife", controller.getProductsByName);
+
 app.get("/weight/:weight", controller.getProductsByName);
 
 app.get("/price/:price", controller.getProductsByPrice);

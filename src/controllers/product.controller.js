@@ -53,6 +53,9 @@ exports.updateProduct = (req, res) =>{
         graphics: req.body.graphics,
         memory: req.body.memory,
         storage: req.body.storage,
+        sensor: req.body.sensor,
+        resolution: req.body.resolution,
+        batterylife: req.body.batterylife,
         weight: req.body.weight,
         price: req.body.price,
         unit_in_stock: req.body.unit_in_stock
