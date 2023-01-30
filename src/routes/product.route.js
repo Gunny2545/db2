@@ -2,6 +2,8 @@ const express = require('express');
 const app = express.Router();
 const controller = require('../controllers/product.controller')
 
+// laptop
+
 app.get("/", controller.getProducts);
 
 app.get("/:id", controller.getProductById);
@@ -28,14 +30,24 @@ app.get("/memory/:memory", controller.getProductsByName);
 
 app.get("/storage/:storage", controller.getProductsByName);
 
+app.get("/weight/:weight", controller.getProductsByName);
+
+app.get("/price/:price", controller.getProductsByPrice);
+
+// mouse
+
+app.get("/mousebrand/:mousebrand", controller.getProductsByPrice);
+
+app.get("/mousemodel/:mousemodel", controller.getProductsByPrice);
+
 app.get("/sensor/:sensor", controller.getProductsByName);
 
 app.get("/resolution/:resolution", controller.getProductsByName);
 
 app.get("/batterylife/:batterylife", controller.getProductsByName);
 
-app.get("/weight/:weight", controller.getProductsByName);
+app.get("/mouseweight/:mouseweight", controller.getProductsByName);
 
-app.get("/price/:price", controller.getProductsByPrice);
+app.get("/mouseprice/:mouseprice", controller.getProductsByPrice);
 
 module.exports = app;
