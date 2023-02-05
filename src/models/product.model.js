@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 const productSchema = new Schema({
     // latop
-    brand: { type: String },
+    brand: { type: String, required: true },
     model: { type: String },
     display: { type: String },
     processor: { type: String },
