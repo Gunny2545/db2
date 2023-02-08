@@ -8,9 +8,14 @@ app.get("/", controller.getProducts);
 
 app.get("/:id", controller.getProductById);
 
-app.post("/", auth, controller.createProduct);
+// auth
+app.post("/", controller.createProduct);
 
-app.put("/:id", auth, controller.updateProduct);
+app.put("/:id", controller.updateProduct);
+
+// app.post("/", auth, controller.createProduct);
+
+// app.put("/:id", auth, controller.updateProduct);
 
 app.patch("/:id", controller.addProductReview);
 
