@@ -6,6 +6,7 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 
 const productRouter = require('./routes/product.route');
+const userRouter = require('./routes/user.route')
 
 app.use(cors());
 app.use(bodyParser.json());
@@ -27,6 +28,7 @@ app.get("/contact", (req, res) => {
 
 app.use("/product", productRouter);
 
+app.use("/user",userRouter);
 
 app.listen(port, () => {
   console.log("Starting node.js at port " + port);

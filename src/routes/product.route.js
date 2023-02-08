@@ -1,16 +1,16 @@
 const express = require('express');
 const app = express.Router();
 const controller = require('../controllers/product.controller')
-
+const auth = require('../middleware/auth')
 // laptop
 
 app.get("/", controller.getProducts);
 
 app.get("/:id", controller.getProductById);
 
-app.post("/", controller.createProduct);
+app.post("/", auth, controller.createProduct);
 
-app.put("/:id", controller.updateProduct);
+app.put("/:id", auth, controller.updateProduct);
 
 app.patch("/:id", controller.addProductReview);
 
