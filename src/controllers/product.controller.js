@@ -20,24 +20,13 @@ exports.getProductById = (req, res)=>{
 exports.createProduct = async (req, res) =>{
     try {
     let product = new Product({
-    // latop
-        brand: req.body.brand,
-        model: req.body.model,
-        display: req.body.display,
-        processor: req.body.processor,
-        graphics: req.body.graphics,
-        memory: req.body.memory,
-        storage: req.body.storage,
-        weight: req.body.weight,
-        price: req.body.price,
-        unit_in_stock: req.body.unit_in_stock,
+   
     // mouse 
         mousebrand: req.body.mousebrand,
         mousemodel: req.body.mousemodel,
+        wired_wireless: req.body.wired_wireless,
         sensor: req.body.sensor,
         resolution: req.body.resolution,
-        batterylife: req.body.batterylife,
-        mouseweight: req.body.mouseweight,
         mouseprice: req.body.mouseprice,
         mouseunit_in_stock: req.body.mouseunit_in_stock
     });
@@ -56,24 +45,13 @@ exports.createProduct = async (req, res) =>{
 
 exports.updateProduct = (req, res) =>{
     let product = {  //ข้อมูลใหม่
-        // latop
-        brand: req.body.brand,
-        model: req.body.model,
-        display: req.body.display,
-        processor: req.body.processor,
-        graphics: req.body.graphics,
-        memory: req.body.memory,
-        storage: req.body.storage,
-        weight: req.body.weight,
-        price: req.body.price,
-        unit_in_stock: req.body.unit_in_stock,
+      
     // mouse 
         mousebrand: req.body.mousebrand,
         mousemodel: req.body.mousemodel,
+        wired_wireless: req.body.wired_wireless,
         sensor: req.body.sensor,
         resolution: req.body.resolution,
-        batterylife: req.body.batterylife,
-        mouseweight: req.body.mouseweight,
         mouseprice: req.body.mouseprice,
         mouseunit_in_stock: req.body.mouseunit_in_stock
     };
