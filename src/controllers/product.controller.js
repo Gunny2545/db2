@@ -31,15 +31,7 @@ exports.createProduct = async (req, res) =>{
         weight: req.body.weight,
         price: req.body.price,
         unit_in_stock: req.body.unit_in_stock,
-    // mouse 
-        mousebrand: req.body.mousebrand,
-        mousemodel: req.body.mousemodel,
-        sensor: req.body.sensor,
-        resolution: req.body.resolution,
-        batterylife: req.body.batterylife,
-        mouseweight: req.body.mouseweight,
-        mouseprice: req.body.mouseprice,
-        mouseunit_in_stock: req.body.mouseunit_in_stock
+
     });
     let createProduct = await product.save();
     res.status(200).json({
@@ -67,15 +59,7 @@ exports.updateProduct = (req, res) =>{
         weight: req.body.weight,
         price: req.body.price,
         unit_in_stock: req.body.unit_in_stock,
-    // mouse 
-        mousebrand: req.body.mousebrand,
-        mousemodel: req.body.mousemodel,
-        sensor: req.body.sensor,
-        resolution: req.body.resolution,
-        batterylife: req.body.batterylife,
-        mouseweight: req.body.mouseweight,
-        mouseprice: req.body.mouseprice,
-        mouseunit_in_stock: req.body.mouseunit_in_stock
+    
     };
     Product.findByIdAndUpdate(req.params.id, product)  //ระบุทั้ง id ที่ต้องการแก้ และข้อมูลใหม่
         .exec((err, result) => {

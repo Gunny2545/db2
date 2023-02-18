@@ -14,16 +14,6 @@ const productSchema = new Schema({
     price: Number,
     unit_in_stock: Number,
 
-    // mouse
-    mousebrand: { type: String },
-    mousemodel: { type: String },
-    sensor: { type: String },
-    resolution: { type: String },
-    batterylife: { type: String },
-    mouseweight: { type: String },
-    mouseprice: Number,
-    mouseunit_in_stock: Number,
-
     // reviews
     reviews:[
         {star: {type: Number, required: true }, comment: String}

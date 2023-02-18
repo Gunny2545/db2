@@ -42,20 +42,4 @@ app.get("/weight/:weight", controller.getProductsByName);
 
 app.get("/price/:price", controller.getProductsByPrice);
 
-// mouse
-
-app.get("/mousebrand/:mousebrand", controller.getProductsByPrice);
-
-app.get("/mousemodel/:mousemodel", controller.getProductsByPrice);
-
-app.get("/sensor/:sensor", controller.getProductsByName);
-
-app.get("/resolution/:resolution", controller.getProductsByName);
-
-app.get("/batterylife/:batterylife", controller.getProductsByName);
-
-app.get("/mouseweight/:mouseweight", controller.getProductsByName);
-
-app.get("/mouseprice/:mouseprice", controller.getProductsByPrice);
-
 module.exports = app;
