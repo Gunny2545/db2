@@ -26,9 +26,11 @@ app.delete("/:id", controller.deleteProductById);
 
 // mouse
 
-app.get("/mousebrand/:mousebrand", controller.getProductsByPrice);
+app.get("/image/:image", controller.getProductsByName);
 
-app.get("/mousemodel/:mousemodel", controller.getProductsByPrice);
+app.get("/mousebrand/:mousebrand", controller.getProductsByName);
+
+app.get("/mousemodel/:mousemodel", controller.getProductsByName);
 
 app.get("/wired_wireless/:wired_wireless", controller.getProductsByName);
 

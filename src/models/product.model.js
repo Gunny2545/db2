@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 const productSchema = new Schema({
     // mouse
-    mousebrand: { type: String },
+    mousebrand: { type: String, required: true },
     mousemodel: { type: String },
     wired_wireless: { type: String },
     sensor: { type: String },

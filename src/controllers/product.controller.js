@@ -22,6 +22,7 @@ exports.createProduct = async (req, res) =>{
     let product = new Product({
    
     // mouse 
+        image: req.body.image,
         mousebrand: req.body.mousebrand,
         mousemodel: req.body.mousemodel,
         wired_wireless: req.body.wired_wireless,
@@ -47,6 +48,7 @@ exports.updateProduct = (req, res) =>{
     let product = {  //ข้อมูลใหม่
       
     // mouse 
+        image: req.body.image,
         mousebrand: req.body.mousebrand,
         mousemodel: req.body.mousemodel,
         wired_wireless: req.body.wired_wireless,
