@@ -21,6 +21,7 @@ exports.createProduct = async (req, res) =>{
     try {
     let product = new Product({
 
+        type: req.body.type,
     // latop
         brand: req.body.brand,
         model: req.body.model,
@@ -32,7 +33,14 @@ exports.createProduct = async (req, res) =>{
         weight: req.body.weight,
         price: req.body.price,
         unit_in_stock: req.body.unit_in_stock,
-
+        // mouse 
+        mousebrand: req.body.mousebrand,
+        mousemodel: req.body.mousemodel,
+        wired_wireless: req.body.wired_wireless,
+        sensor: req.body.sensor,
+        resolution: req.body.resolution,
+        mouseprice: req.body.mouseprice,
+        mouseunit_in_stock: req.body.mouseunit_in_stock
     });
     let createProduct = await product.save();
     res.status(200).json({
@@ -49,7 +57,9 @@ exports.createProduct = async (req, res) =>{
 
 exports.updateProduct = (req, res) =>{
     let product = {  //ข้อมูลใหม่
+
         // latop
+        type: req.body.type,
         brand: req.body.brand,
         model: req.body.model,
         display: req.body.display,
@@ -60,7 +70,14 @@ exports.updateProduct = (req, res) =>{
         weight: req.body.weight,
         price: req.body.price,
         unit_in_stock: req.body.unit_in_stock,
-    
+        // mouse 
+        mousebrand: req.body.mousebrand,
+        mousemodel: req.body.mousemodel,
+        wired_wireless: req.body.wired_wireless,
+        sensor: req.body.sensor,
+        resolution: req.body.resolution,
+        mouseprice: req.body.mouseprice,
+        mouseunit_in_stock: req.body.mouseunit_in_stock
 
     };
     Product.findByIdAndUpdate(req.params.id, product)  //ระบุทั้ง id ที่ต้องการแก้ และข้อมูลใหม่
