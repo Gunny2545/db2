@@ -5,7 +5,7 @@ module.exports = function (app) {
         useUnifiedTopology: true,
         useNewUrlParser: true,
         // put your db name
-        dbName: "LAPTOP-SHOP"
+        dbName: "MOUSE-SHOP"
     }).then(connection => console.log("Application is connected to db")).catch(err => console.log(err))
     mongoose.Promise = global.Promise;
     process.on("SIGINT", cleanup);

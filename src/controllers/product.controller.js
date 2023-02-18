@@ -20,6 +20,7 @@ exports.getProductById = (req, res)=>{
 exports.createProduct = async (req, res) =>{
     try {
     let product = new Product({
+
     // latop
         brand: req.body.brand,
         model: req.body.model,
@@ -60,6 +61,7 @@ exports.updateProduct = (req, res) =>{
         price: req.body.price,
         unit_in_stock: req.body.unit_in_stock,
     
+
     };
     Product.findByIdAndUpdate(req.params.id, product)  //ระบุทั้ง id ที่ต้องการแก้ และข้อมูลใหม่
         .exec((err, result) => {
