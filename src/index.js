@@ -5,6 +5,7 @@ const port = process.env.PORT || 4000;
 const bodyParser = require('body-parser');
 const cors = require('cors');
 
+const contactRouter = require('./routes/contact.route');
 const productRouter = require('./routes/product.route');
 const userRouter = require('./routes/user.route')
 
@@ -22,9 +23,7 @@ app.get("/about", (req, res) => {
   res.send("About us");
 });
 
-app.get("/contact", (req, res) => {
-    res.send("Contact us");
-  });
+app.use("/contact", contactRouter);
 
 app.use("/product", productRouter);
 
