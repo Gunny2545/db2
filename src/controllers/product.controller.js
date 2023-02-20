@@ -22,6 +22,7 @@ exports.createProduct = async (req, res) =>{
     let product = new Product({
 
         type: req.body.type,
+        image: req.body.image,
     // latop
         brand: req.body.brand,
         model: req.body.model,
@@ -57,9 +58,10 @@ exports.createProduct = async (req, res) =>{
 
 exports.updateProduct = (req, res) =>{
     let product = {  //ข้อมูลใหม่
-
-        // latop
+        
         type: req.body.type,
+        image: req.body.image,
+        // latop
         brand: req.body.brand,
         model: req.body.model,
         display: req.body.display,

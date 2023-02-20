@@ -4,6 +4,10 @@ const Schema = mongoose.Schema;
 const productSchema = new Schema({
     // type of product
     type: { type: String},
+    // image
+    image: {
+        type: String,
+    },
     // latop
     brand: { type: String},
     model: { type: String },

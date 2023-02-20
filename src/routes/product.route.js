@@ -23,6 +23,7 @@ app.patch("/:id", controller.addProductReview);
 app.delete("/:id", controller.deleteProductById);
 
 // app.delete("/:id", auth, controller.deleteProductById);
+app.get("/image/:image", controller.getProductsByName);
 
 app.get("/type/:type", controller.getProductsByName);
 
