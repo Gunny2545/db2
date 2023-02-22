@@ -58,6 +58,27 @@ exports.updateContact = (req, res) =>{
         });
 };
 
+exports.addContactReply = async (req, res) => {
+    let replyData = {
+        $push: {
+            reply: {
+                comment: req.body.comment
+            }
+        }
+    };
+    Contact.findByIdAndUpdate(req.params.id, replyData)  //ระบุทั้ง id ที่ต้องการแก้ และข้อมูลใหม่
+        .exec((err, result) => {
+            // findById อีกครั้งเพื่อเอา data ใหม่
+            Contact.findById(req.params.id)
+                .exec((err, result) => {
+                    res.status(200).json({
+                        msg: "OK",
+                        data: result
+                    });
+                });
+        });
+};
+
 exports.deleteContactById = async (req, res) => {
     Contact.findByIdAndDelete(req.params.id)
         .exec((err, result) => {
